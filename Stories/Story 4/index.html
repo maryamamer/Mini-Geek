@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="http://bit.ly/ghfavicon" width=32px>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="prefetch" href="pause1.svg">
+  <link rel="prefetch" href="play1.svg">
+  <link rel="prefetch" href="stop1.svg">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story 3</title>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <img src="./story4.jpg" width="500px" height="300px"
+  style= "margin-left: 33%; margin-top: 0%; padding-top: 0%;">
+  <div class=buttons style="display: inline-block; float: right;">
+    <button id=play onclick="startScrollLoop()"></button>
+    &nbsp;
+    <button id=pause onclick="stopScrollLoop()"></button> 
+    &nbsp;
+    <button id=stop onclick="stopScrollLoop()"></button>
+  </div>
+  
+  
+  <article>
+    <h1>The Ant And The Grasshopper</h1>
+    <p>One bright day in late autumn a family of Ants were bustling about in the warm sunshine, drying out the grain they had stored up during the summer, when a starving Grasshopper, his fiddle under his arm, came up and humbly begged for a bite to eat.</p>
+    <p>"What!" cried the Ants in surprise, "haven't you stored anything away for the winter? What in the world were you doing all last summer?"</p>
+    <p>"I didn't have time to store up any food," whined the Grasshopper; "I was so busy making music that before I knew it the summer was gone."</p>
+    <p>The Ants shrugged their shoulders in disgust."Making music, were you?" they cried. "Very well; now dance!" And they turned their backs on the Grasshopper and went on with their work.</p>
+    <p>There's a time for work and a time for play.</p>
+  </article>
+  <script>
+    incrementScroll = function () {
+      window.scrollBy(0, 30);
+    }
+
+    startScrollLoop = function () {
+      scrollLoopId = setInterval(incrementScroll, 7000);
+    }
+
+    stopScrollLoop = function () {
+      clearInterval(scrollLoopId);
+    }
+  </script>
+  <!-- <script>
+    function fun()
+    {
+      var sampleText = document.getElementsByTagName("article")[0].textContent;
+    if ('speechSynthesis' in window) {
+    var bodyText = new SpeechSynthesisUtterance(sampleText);
+    window.speechSynthesis.speak(bodyText);
+    }
+}
+  </script> -->
+</body>
+
+</html>

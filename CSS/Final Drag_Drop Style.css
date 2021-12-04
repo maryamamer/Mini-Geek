@@ -1,0 +1,26 @@
+body {
+    background-image: url("../Images/Home\ Background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.link:hover {
+    color: #caf0f8;
+    text-decoration-line: none;
+}
+
+@font-face {
+    font-family: New;
+    src: url("../Fonts/Lobster-Regular.ttf");
+}
+
+@font-face {
+    font-family: New2;
+    src: url("../Fonts/font2/BarlowSemiCondensed-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: New3;
+    src: url("../Fonts/Font Header Home Page/Proza_Libre/ProzaLibre-Italic.ttf");
+}

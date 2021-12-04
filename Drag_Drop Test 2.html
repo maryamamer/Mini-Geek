@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/buttons.css">
+    <link rel="stylesheet" href="./CSS/Drag_Drop Test 2 Style.css">
+    <title>Level Meduim</title>
+</head>
+<body> 
+    <center>
+        <h1 style="font-style: oblique;" > What Does Monkey Eat ? </h1>
+        <div id="div1" ondrop="drop(event)" ondragover="event.preventDefault()"></div>
+        <br><br><br>
+        <div id="div2" ondrop="drop(event)" ondragover="event.preventDefault()">
+            <img id="drag1" src="./Images/banana_preview_rev_1.png" draggable="true" ondragstart="dragStart(this)" width="350px"
+                height="300px">
+            <img id="drag2" src="./Images/apple_preview_rev_1.png"  style="margin-bottom: 2%; margin-right: 5%; margin-left: 4%;" draggable="true" ondragstart="dragStart(this)" width="350px"
+                height="250px">
+            <img id="drag3" src="./Images/orange_preview_rev_1.png" draggable="true" ondragstart="dragStart(this)" width="400px"
+                height="300px">
+        </div>
+    </center>
+    <br><br><br>
+    <center>
+        <a href="#" class="button button-caution button-pill button-jumbo" id="BTN">OK</a>
+    </center>
+    <audio src="./Voices/Kids Cheering - Gaming Sound Effect (HD).mp4" id="Sound1"></audio>
+    <audio src="./Voices/Wrong Buzzer - Sound Effect_Trim.mp4" id="Sound2"></audio>
+    
+
+    <script>
+        var correctPhoto = document.getElementById("drag1");
+        var btn = document.getElementById("BTN");
+        var Bigdiv = document.getElementById("div1");
+        var sound = document.getElementById("Sound1")
+        var Wrongsound = document.getElementById("Sound2")
+        var btn2 = document.getElementById("BTN2");
+
+
+        var draggedElem;
+
+        function dragStart(draggable) {
+            console.log(draggable)
+            draggedElem = draggable; // img 
+        }
+
+        function drop(event) {
+            //event.preventDefault();
+            console.log(event)
+            event.target.appendChild(draggedElem);
+
+            var isEmpty = document.getElementById('div1').innerHTML === "";
+            console.log(isEmpty);
+            btn.addEventListener('click', function () {
+                if (!isEmpty && draggedElem === correctPhoto) {
+                    sound.play();
+                    setTimeout(function(){window.location.href="./Drag_Drop Test 3.html"},4000);
+                }
+                else if (!isEmpty && draggedElem != correctPhoto) {
+                    Wrongsound.play();
+                }
+            })
+        }
+    </script>
+    
+</body>
+</html>

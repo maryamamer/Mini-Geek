@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/buttons.css">
+    <link rel="stylesheet" href="./CSS/PaintStyle.css">
+    <script src="./Paint.js"></script>
+    <title>Paint</title>
+    
+</head>
+
+<body>
+    <h1 style="font-family:Arial, Helvetica, sans-serif">Draw Like A Picasso</h1>
+    <div id="dashboard">
+            <a  class="button button-primary button-pill button-small" onclick="PaintDraw()">Free Hand</a>
+            <a  class="button button-primary button-pill button-small" onclick="Line()">Line</a>
+            <a  class="button button-primary button-pill button-small" onclick="Rec()">Rectangle</a>
+            <a  class="button button-primary button-pill button-small" onclick="Circle()">Circle</a>
+            <a  class="button button-primary button-pill button-small" onclick="Clearfun()">Eraser</a>
+        Fill Color <input type="color" name="fill-color" class="color-btn" id="fill-color">
+        Stroke Color <input type="color" name="stroke-color" class="color-btn" id="stroke-color">
+    </div>
+
+    <div id="option-menu"></div>
+    <div style="margin-top: 15px;">
+        <canvas id="canvas"></canvas>
+    </div>
+    <img src="./Images/paint_preview_rev_1.png"
+    style="position: fixed; right: 0%; bottom: 0%; width: 200px; height: 200px; z-index: -1 ;">
+<img src="./Images/index2_preview_rev_1.png"
+    style="position: fixed; left: 0%; top: 0%; width: 200px; height: 200px; z-index: -1 ;">
+
+   
+    <script>
+        var can = document.getElementById("canvas");
+        can.width = "1200";
+        can.height = "500";
+        can.style.backgroundColor = "#fffff2";
+    </script>
+  
+   
+</body>
+
+</html>

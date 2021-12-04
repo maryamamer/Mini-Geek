@@ -1,0 +1,17 @@
+body {
+    background-image: url("../Images/Home\ Background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#div1 {
+    width: 400px;
+    height: 300px;
+    padding: 10px;
+    border: 10px solid #aaaaaa;
+    margin-top: 70px;
+}
+@font-face {
+    font-family: New;
+    src: url("../Fonts/Lobster-Regular.ttf");
+}

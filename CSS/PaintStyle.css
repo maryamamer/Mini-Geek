@@ -1,0 +1,14 @@
+body {
+    margin: 100px auto;
+    text-align: center;
+    background-color: #F7FFF7;
+}
+
+canvas {
+    border-style: groove;
+    border-width: 30px;
+    border-top-color: #4ECDC4;
+    border-bottom-color: #1A535C;
+    border-left-color: #FFE66D;
+    border-right-color: #FF6B6B;
+}

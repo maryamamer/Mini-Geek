@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="http://bit.ly/ghfavicon" width=32px>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="prefetch" href="pause1.svg">
+  <link rel="prefetch" href="play1.svg">
+  <link rel="prefetch" href="stop1.svg">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story 3</title>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <img src="./story3.jpg" width="500px" height="300px"
+  style= "margin-left: 33%; margin-top: 0%; padding-top: 0%;">
+  <div class=buttons style="display: inline-block; float: right;">
+    <button id=play onclick="startScrollLoop()"></button>
+    &nbsp;
+    <button id=pause onclick="stopScrollLoop()"></button> 
+    &nbsp;
+    <button id=stop onclick="stopScrollLoop()"></button>
+  </div>
+  
+  
+  <article>
+    <h1>The Tortoise And The Hare</h1>
+    <p>A Hare was making fun of the Tortoise one day for being so slow. "Do you ever get anywhere?" he asked with a mocking laugh. "Yes," replied the Tortoise, "and I get there sooner than you think. I'll run you a race and prove it."</p>
+    <p>The Hare was much amused at the idea of running a race with the Tortoise, but for the fun of the thing he agreed. So the Fox, who had consented to act as judge, marked the distance and started the runners off.</p>
+    <p>The Hare was soon far out of sight, and to make the Tortoise feel very deeply how ridiculous it was for him to try a race with a Hare, he lay down beside the course to take a nap until the Tortoise should catch up.</p>
+    <p>The Tortoise meanwhile kept going slowly but steadily, and, after a time, passed the place where the Hare was sleeping. But the Hare slept on very peacefully; and when at last he did wake up, the Tortoise was near the goal. The Hare now ran his swiftest, but he could not overtake the Tortoise in time.</p>
+    <p>Slow and steady wins the race.</p>
+  </article>
+  <script>
+    incrementScroll = function () {
+      window.scrollBy(0, 30);
+    }
+
+    startScrollLoop = function () {
+      scrollLoopId = setInterval(incrementScroll, 7000);
+    }
+
+    stopScrollLoop = function () {
+      clearInterval(scrollLoopId);
+    }
+  </script>
+  <!-- <script>
+    function fun()
+    {
+      var sampleText = document.getElementsByTagName("article")[0].textContent;
+    if ('speechSynthesis' in window) {
+    var bodyText = new SpeechSynthesisUtterance(sampleText);
+    window.speechSynthesis.speak(bodyText);
+    }
+}
+  </script> -->
+</body>
+
+</html>
